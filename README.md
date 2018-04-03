@@ -7,7 +7,7 @@
 
 ## How to Use?
 
-![](https://raw.githubusercontent.com/ghostcode/nodejs-api-tree/master/calc-same.gif)
+![](https://raw.githubusercontent.com/ghostcode/nodejs-api-tree/master/use.gif)
 
 ## How to install?
 
