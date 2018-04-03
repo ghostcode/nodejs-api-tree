@@ -1,0 +1,18 @@
+{
+	"name": "Getting Started Example",
+	"version": "1.0",
+	"description": "Build an Extension!",
+	"manifest_version": 2,
+	"content_scripts": [
+		{
+			"matches": [
+				"https://nodejs.org/*"
+			],
+			"css": [],
+			"js": [
+				"js/better-view.js"
+			],
+			"run_at": "document_idle"
+		}
+	]
+}
