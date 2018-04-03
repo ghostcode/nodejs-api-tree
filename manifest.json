@@ -1,7 +1,7 @@
 {
-	"name": "Getting Started Example",
+	"name": "Nodejs-API-View",
 	"version": "1.0",
-	"description": "Build an Extension!",
+	"description": "View the Nodejs API more comfortably!",
 	"manifest_version": 2,
 	"content_scripts": [
 		{
