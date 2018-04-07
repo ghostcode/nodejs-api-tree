@@ -13,17 +13,17 @@
 
 ![](https://raw.githubusercontent.com/ghostcode/nodejs-api-tree/master/install.gif)
 
-First One：
+First：
 
-1. clone 下面的仓库到本地
-2. 在地址栏输入：chrome://extensions/
-3. 打开开发者模式
-4. 左边选择-》加载已解压的扩展程序-》选择刚才clone的文件夹
+1. clone this repo.
+2. In chrome address bar input ：chrome://extensions/.
+3. Open developer mode.
+4. click:Load unpacked extension… -》 Find the clone address above.
 
-第二种：
+Second：
 
-1. 打开[Greasy Fork](https://greasyfork.org/zh-CN) 安装对应浏览器的插件
-2. 打开[愉快地阅读 Nodejs API](https://greasyfork.org/zh-CN/scripts/40278-%E6%84%89%E5%BF%AB%E5%9C%B0%E9%98%85%E8%AF%BB-nodejs-api) 点击安装就可以。
+1. open [Greasy Fork](https://greasyfork.org/zh-CN) Install the corresponding browser plug-in.
+2. open [愉快地阅读 Nodejs API](https://greasyfork.org/zh-CN/scripts/40278-%E6%84%89%E5%BF%AB%E5%9C%B0%E9%98%85%E8%AF%BB-nodejs-api) click install button。
 
 # To do
 
