@@ -1,13 +1,24 @@
-const apiContainer = document.querySelector('#toc')
-const apiTree = apiContainer.querySelector('ul')
-const handShank = document.createElement('div')
-const arrowRight = document.createTextNode('>>')
+(()=>{
+    const apiContainer = document.querySelector('#toc')
 
-let status =  true // true:open; false:close
-let apiContainerWidth = 0
-let handShankWidth = 32
+    if (!isInPage(apiContainer)){
+        return;
+    }
 
-let apiContainerStyle = `
+    const apiTree = apiContainer.querySelector('ul')
+
+    if(!isInPage(apiTree)){
+        return;
+    }
+
+    const handShank = document.createElement('div')
+    const arrowRight = document.createTextNode('>>')
+
+    let status = true // true:open; false:close
+    let apiContainerWidth = 0
+    let handShankWidth = 32
+
+    let apiContainerStyle = `
     position:fixed;
     z-index:10;
     right:-18px;
@@ -17,12 +28,12 @@ let apiContainerStyle = `
     padding-bottom:60px;
 `
 
-let apiTreeStyle = `
+    let apiTreeStyle = `
     height:100%;
     overflow-y:scroll;
 `
 
-let handShankStyle = `
+    let handShankStyle = `
     position:absolute;
     top:50%;
     left:0;
@@ -37,22 +48,29 @@ let handShankStyle = `
     border-radius:0 10px 10px 0
 `
 
-handShank.style.cssText = handShankStyle
-apiContainer.style.cssText = apiContainerStyle
-apiTree.style.cssText = apiTreeStyle
+    handShank.style.cssText = handShankStyle
+    apiContainer.style.cssText = apiContainerStyle
+    apiTree.style.cssText = apiTreeStyle
 
-handShank.appendChild(arrowRight)
-apiContainer.appendChild(handShank)
+    handShank.appendChild(arrowRight)
+    apiContainer.appendChild(handShank)
 
-// after position:fixed get the real width
-apiContainerWidth = apiContainer.clientWidth
+    // after position:fixed get the real width
+    apiContainerWidth = apiContainer.clientWidth
 
-handShank.addEventListener('click', function (params) {
-    if (status) {
-        apiContainer.style.cssText = `${apiContainerStyle};right:-${apiContainerWidth - handShankWidth}px`
-        status = false
-    } else {
-        apiContainer.style.cssText = apiContainerStyle
-        status = true
-    }
-}, true)
+    handShank.addEventListener('click', function (params) {
+        if (status) {
+            apiContainer.style.cssText = `${apiContainerStyle};right:-${apiContainerWidth - handShankWidth}px`
+            status = false
+        } else {
+            apiContainer.style.cssText = apiContainerStyle
+            status = true
+        }
+    }, true)
+
+})()
+
+// check node is exist
+function isInPage(node){
+    return document.body.contains(node)
+}
